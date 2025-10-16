@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captcha Solver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .captcha-image {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            max-width: 100%;
+            height: auto;
+            display: block; /* Ensure image takes its own line */
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #e0e0e0; /* Placeholder background */
+            min-height: 50px; /* Minimum height for placeholder */
+        }
+        input[type="text"] {
+            width: calc(100% - 22px); /* Adjust for padding and border */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box; /* Include padding and border in width */
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.2s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .note {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Solve the Captcha</h1>
+        <p>Please enter the characters you see in the image below:</p>
+        <img class="captcha-image" id="captchaImage" 
+             src="data:image/webp;base64,UklGRhgBAABXRUJQVlA4IBwBAAAwAQCdASoBAAIACsAEpQAA/y2kAAD+7S5L/r6wAA==" 
+             alt="Captcha Image - Placeholder" 
+             title="Placeholder Captcha Image (Original binary not available for direct embedding)">
+        <input type="text" id="captchaSolution" placeholder="Enter solution here" required>
+        <button type="submit">Verify</button>
+        <p class="note">Note: This is a front-end only demonstration. There is no backend validation.</p>
+    </div>
+</body>
+</html>
